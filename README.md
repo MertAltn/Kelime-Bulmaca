@@ -5,14 +5,16 @@ Android öncelikli, .NET MAUI ile geliştirilmiş Türkçe kelime oluşturma oyu
 ## İlk sürüm
 
 - 8 bölüm; internetsiz, önceden belirlenmiş Türkçe hedef kelimeler.
-- Harflere sırayla dokunarak kelime oluşturma; geri alma ve temizleme.
+- Üstte kelime kutucukları, altta dairesel karışık harfler.
+- Harflerin üzerinden sürükleyerek kelime oluşturma; bırakınca otomatik gönderme.
+- Seçim çizgisi ve bir önceki harfe dönerek son harfi geri alma.
 - Harfleri karıştırma ve ücretsiz ilk harf ipucu.
 - Doğru kelimenin her harfi için 10 puan; yinelenen tahminlere puan verilmez.
 - Bölümdeki bütün hedefler bulununca sonraki bölüme geçiş.
 - İlerlemenin cihazda otomatik saklanması ve onayla sıfırlanması.
 - Türkçe İ/i ve I/ı ayrımı; aynı harften birden fazla varsa ayrı kutular.
 
-Bu prototip genel bir Türkçe sözlük kullanmaz. Geçerli olsa bile bölümün hedef listesinde bulunmayan kelimeler sayılmaz. Sürükleyerek harf birleştirme, ses ve çevrimiçi özellikler henüz yoktur.
+Bu prototip genel bir Türkçe sözlük kullanmaz. Geçerli olsa bile bölümün hedef listesinde bulunmayan kelimeler sayılmaz. Ses ve çevrimiçi özellikler henüz yoktur.
 
 ## Android'de çalıştırma
 
@@ -58,4 +60,4 @@ Yeni bölüm için `Game.cs` içindeki `Levels` listesine `Level` ekleyin. Kuruc
 
 ## Doğrulama durumu
 
-Oyun mantığı yerel .NET 6 ortamında çalıştırıldı; 62 kontrol başarıyla geçti. İlk geliştirme ortamında .NET 10 SDK ve MAUI iş yükü bulunmadığı için Android derlemesi ve cihaz üzerindeki görünüm henüz doğrulanmadı.
+Oyun mantığında .NET 10 ile 62 kontrol geçti. Android x64 emülatörü için `DesignCheck` yapılandırmasında derleme 0 hata ve 0 uyarıyla tamamlandı. Pixel 7 API 36 emülatöründe kutucuklar, harf çemberi, sürükleme çizgisi ve kelime gönderimi kontrol edildi. Fiziksel cihaz ve farklı ekran boyutları henüz test edilmedi.
